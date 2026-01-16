@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Banco de Moedas</title>
+    <style>
+        body { background: #0d1117; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .banco-caixa { background: #161b22; padding: 30px; border-radius: 20px; border: 2px solid gold; text-align: center; width: 320px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); }
+        .saldo-grande { font-size: 48px; color: gold; margin: 20px 0; font-weight: bold; }
+        .historico { background: #0d1117; padding: 10px; border-radius: 10px; font-size: 14px; color: #8b949e; margin-bottom: 20px; }
+        .botao-voltar { background: #21262d; color: white; border: 1px solid #30363d; padding: 10px 20px; border-radius: 6px; cursor: pointer; text-decoration: none; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="banco-caixa">
+        <h1>Meu Banco 🏦</h1>
+        <p>Saldo Atual:</p>
+        <div class="saldo-grande">💰 <span id="saldo-banco">0</span></div>
+        <div class="historico">
+            <p>Rendimento: 100 moedas por acerto</p>
+        </div>
+        <a href="index.html" class="botao-voltar">Voltar ao Jogo</a>
+    </div>
+
+    <script>
+        // Puxa o saldo do localStorage que você configurou no script.js
+        let saldo = localStorage.getItem('moedas') || 0;
+        document.getElementById('saldo-banco').innerText = saldo;
+    </script>
+</body>
+</html>

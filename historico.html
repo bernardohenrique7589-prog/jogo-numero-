@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Extrato de Moedas</title>
+    <style>
+        body { background: #0d1117; color: white; font-family: sans-serif; padding: 40px; text-align: center; }
+        .tabela { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 20px; max-width: 400px; margin: auto; }
+        .ganho { color: #238636; font-weight: bold; margin-bottom: 10px; border-bottom: 1px solid #30363d; padding: 5px; }
+        .voltar { color: #8b949e; text-decoration: none; display: block; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="tabela">
+        <h1>Extrato 🧾</h1>
+        <div id="lista">
+            <div class="ganho">+ 100 moedas (Acerto Número Secreto)</div>
+        </div>
+        <a href="index.html" class="voltar">← Voltar para o Jogo</a>
+    </div>
+
+    <script>
+        // Mostra o saldo total também aqui
+        let saldo = localStorage.getItem('moedas') || 0;
+        console.log("Saldo atual visualizado no histórico: " + saldo);
+    </script>
+</body>
+</html>
