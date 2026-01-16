@@ -48,3 +48,4 @@ document.getElementById('config').onclick = () => {
         texto.style.color = "#6366f1";
     }
 };
+
